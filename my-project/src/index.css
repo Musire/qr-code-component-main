@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lightgray: #D6E2F0;
+  --grayblue: #7B879D;
+  --darkblue: #1F3251;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--lightgray);
+  color: var(--darkblue);
+  overflow-x: hidden;
+}
+
+@layer components{
+  .centered {
+      @apply flex flex-row justify-center items-center
+  }
+
+  .centered-col {
+      @apply flex flex-col justify-center items-center
+  }
+
+  .spaced {
+      @apply flex flex-row justify-between items-center
+  }
+
+  .spaced-col {
+      @apply flex flex-col justify-between items-center
+  }
+
+  .evenly {
+      @apply flex flex-row justify-evenly items-center
+  }
+
+  .evenly-col {
+    @apply flex flex-col justify-evenly items-center
+  }
+
+  .invisilink {
+      @apply relative collapse
+  }
+
+  .block-container {
+      @apply w-[50vw] min-h-[50vh]
+  }
+
+  .page-container {
+    @apply min-h-screen w-screen
+  }
+
+  .content-container {
+    @apply h-[calc(100vh-4rem)] md:h-[calc(100vh-6rem)] centered-col md:centered w-full bg-white mt-16 md:mt-24
+  }
+
+  .easy-transition {
+    @apply duration-300 ease-in-out hover:cursor-pointer
+  }
+
+  .slow-transition {
+    @apply duration-700 ease-in-out hover:cursor-pointer
+  }
+
+  .slugish-transition {
+    @apply duration-1000 ease-in-out hover:cursor-pointer
+  }
+
+  .form-input {
+    @apply bg-neutral-100 rounded-lg py-2 px-4 hover:bg-silver easy-transition text-black 
+  }
+
+  .form-button {
+    @apply px-6 py-2 font-semibold rounded-lg bg-silver text-primary hover:bg-white easy-transition disabled:hover:cursor-not-allowed disabled:bg-primary easy-transition
+  }
+
+  .navbar-link {
+    @apply border-2 py-1 px-2 md:py-2 md:px-4 text-xl
+  }
+
+
+}
